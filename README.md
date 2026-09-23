@@ -2,7 +2,7 @@
 
 A personal homepage focused on data science and AI, built with HTML5, CSS3, vanilla JavaScript, and Bootstrap 5. It is written for recruiters, professors, and classmates who want to see my experience with retrieval systems, language models, and machine learning research.
 
-**Live site:** add your GitHub Pages URL here after deploying
+**Live site:**  https://sharthiabhinay.github.io/Personal-Website/
 
 ## Author
 
