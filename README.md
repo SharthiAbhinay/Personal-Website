@@ -2,7 +2,7 @@
 
 A personal homepage focused on data science and AI, built with HTML5, CSS3, vanilla JavaScript, and Bootstrap 5. It is written for recruiters, professors, and classmates who want to see my experience with retrieval systems, language models, and machine learning research.
 
-**Live site:**  https://sharthiabhinay.github.io/Personal-Website/
+**Live site:** https://sharthiabhinay.github.io/Personal-Website/
 
 ## Author
 
@@ -11,8 +11,8 @@ A personal homepage focused on data science and AI, built with HTML5, CSS3, vani
 
 ## Class
 
-CS 5610 Web Development, Northeastern University
-Instructor: John Alexis Guerra Gomez
+CS 5610 Web Development, Northeastern University.\
+Instructor: John Alexis Guerra Gomez.\
 Course page: https://johnguerra.co/classes/webDevelopment_online_fall_2026/
 
 ## Project Objective
@@ -25,11 +25,7 @@ Build a responsive, multi-page personal homepage that shows who I am and what I 
 
 ## Screenshot
 
-Add a screenshot of the live home page at `res/screenshot.png`, then show it here with:
-
-```markdown
-![Home page with the resume search panel](res/screenshot.png)
-```
+[![Home page with my photo, headline, and the Search my resume panel](res/screenshot.png)](https://sharthiabhinay.github.io/Personal-Website/)
 
 ## Design
 
@@ -61,7 +57,9 @@ Add a screenshot of the live home page at `res/screenshot.png`, then show it her
 │   ├── search.js       # TF-IDF index, ranking, and results rendering
 │   └── resume.js       # Print or save as PDF button
 ├── res/
-│   └── favicon.svg
+│   ├── favicon.svg     # SA monogram shown in the browser tab
+│   ├── sharthi-abhinay.jpg  # Profile photo on the home page
+│   └── screenshot.png  # Screenshot used in this README
 ├── eslint.config.js
 ├── package.json
 ├── LICENSE
@@ -84,8 +82,8 @@ This is a static site with no build step.
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/SharthiAbhinay/Personal-Website.git
+cd Personal-Website
 ```
 
 ### 2. Open it
@@ -119,8 +117,17 @@ Push to GitHub and enable GitHub Pages for the `main` branch, serving from the r
 - Wrote the page copy from my resume notes and my statement of purpose, keeping every figure consistent with my resume
 - Proposed the design direction (viridis palette, Atkinson Hyperlegible Next, a live search as the home page's main feature)
 - Tested the search ranking and page behavior, and drafted this README
+- Cropped and resized my profile photo and added it to the home page layout
+- Designed the "SA" favicon, with letter shapes traced from Poppins Bold
+- Fixed README formatting (screenshot, line breaks) and reviewed the README for accuracy
 
-**Prompt used (summarized):** "Go through the two personal pages in my folder for inspiration, then build me a simple personal website focused only on data science and AI, including a resume page, using my resume notes and my statement of purpose."
+**Prompts used (summarized):**
+
+1. "Go through the two personal pages in my folder for inspiration, then build me a simple personal website focused only on data science and AI, including a resume page, using my resume notes and my statement of purpose."
+2. "Add my picture to the right of the headline, and change its background or size as you see fit."
+3. "Suggest the best favicon for the browser tab."
+4. "Show res/screenshot.png as a picture in the README, and put the Class lines on separate lines."
+5. "Check the README for anything missing or wrongly represented."
 
 ## Sources and References
 
@@ -129,6 +136,7 @@ Push to GitHub and enable GitHub Pages for the `main` branch, serving from the r
 - Viridis colormap: https://bids.github.io/colormap/
 - Atkinson Hyperlegible Next on Google Fonts: https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next
 - TF-IDF overview: https://en.wikipedia.org/wiki/Tf%E2%80%93idf
+- Poppins (SIL Open Font License), used for the favicon letters: https://fonts.google.com/specimen/Poppins
 
 ## License
 

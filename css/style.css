@@ -178,6 +178,25 @@ a:hover {
   font-weight: 600;
 }
 
+.hero-photo {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin-inline-start: auto;
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px var(--rule);
+}
+
+@media (max-width: 991.98px) {
+  .hero-photo {
+    max-width: 11rem;
+    margin-inline-start: 0;
+  }
+}
+
 /* Home: search panel (the one bold surface on the site) */
 
 .search-panel {
