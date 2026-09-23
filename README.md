@@ -13,7 +13,7 @@ A personal homepage focused on data science and AI, built with HTML5, CSS3, vani
 
 CS 5610 Web Development, Northeastern University
 Instructor: John Alexis Guerra Gomez
-Course page: add your section's course page link here
+Course page: https://johnguerra.co/classes/webDevelopment_online_fall_2026/
 
 ## Project Objective
 
