@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sharthi Abhinay" />
+    <meta
+      name="description"
+      content="Resume of Sharthi Abhinay: data science and AI experience in RAG, multi-agent systems, document AI, and machine learning research."
+    />
+    <title>Resume | Sharthi Abhinay</title>
+    <link rel="icon" href="./res/favicon.svg" type="image/svg+xml" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md" aria-label="Main">
+        <div class="container">
+          <a class="navbar-brand site-brand" href="./index.html"
+            >Sharthi Abhinay</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#site-nav-links"
+            aria-controls="site-nav-links"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="site-nav-links">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./resume.html"
+                  >Resume</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="container resume">
+      <header class="resume-header">
+        <div>
+          <h1>Sharthi Abhinay</h1>
+          <p class="resume-tagline">
+            MS Computer Science student at Northeastern University, working in
+            data science and AI.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:sharthiabhinay@gmail.com"
+                >sharthiabhinay@gmail.com</a
+              >
+            </li>
+            <li><a href="tel:+18573517823">(857) 351-7823</a></li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/sharthi-abhinay"
+                target="_blank"
+                rel="noopener noreferrer"
+                >linkedin.com/in/sharthi-abhinay</a
+              >
+            </li>
+          </ul>
+        </div>
+        <button type="button" id="print-resume" class="print-button no-print">
+          Print or save as PDF
+        </button>
+      </header>
+
+      <section class="resume-section" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">Northeastern University</h3>
+            <p class="entry-dates">September 2025 to May 2027 (expected)</p>
+          </div>
+          <p class="entry-role">Master of Science in Computer Science</p>
+          <ul class="entry-points">
+            <li id="edu-northeastern">
+              Coursework: Data Management and Database Design, Algorithms.
+            </li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">IIT Patna</h3>
+            <p class="entry-dates">July 2019 to May 2023</p>
+          </div>
+          <p class="entry-role">Bachelor of Technology, Engineering</p>
+          <ul class="entry-points">
+            <li id="edu-iitpatna">
+              Coursework: Linear Algebra, Calculus, Programming and Data
+              Structures, Python Programming, C++.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+
+        <article class="entry" id="carelon">
+          <div class="entry-head">
+            <h3 class="entry-title">Carelon</h3>
+            <p class="entry-dates">July 2023 to July 2025</p>
+          </div>
+          <p class="entry-role">Associate Software Engineer, Hyderabad, India</p>
+          <ul class="entry-points">
+            <li id="carelon-rag">
+              Built an enterprise RAG system using LLaMA 70B, LangGraph, Qdrant
+              vector DB, semantic retrieval, and cross-encoder reranking across
+              25+ policy documents, lifting top-1 accuracy from 66% to 78%,
+              cutting P95 retrieval latency from 1.8s to 0.9s (50%), and
+              reducing policy lookup time by 90% for 200+ internal users.
+            </li>
+            <li id="carelon-claims">
+              Designed an explainable AI medical-claims adjudication pipeline
+              processing 1,000+ claims daily across 15+ claim types using
+              GPT-4o entity extraction, bounding-box source mapping, and a
+              config-driven rules engine, achieving 85% decision accuracy, 75%
+              faster clinician review, and traceability for audits.
+            </li>
+            <li id="carelon-agents">
+              Architected a production multi-agent AI system with LangGraph and
+              GPT-4o orchestrating 4 specialized service agents (address
+              updates, ID card generation, member inquiries, policy
+              terminations), processing 500+ daily member requests at 85%
+              straight-through rate and 94% intent-classification accuracy with
+              human-in-the-loop validation and PostgreSQL state persistence.
+            </li>
+            <li id="carelon-deploy">
+              Deployed containerized AI services on AWS with Docker and
+              Kubernetes, integrating Tesseract OCR and LLM-driven document
+              parsing; managed releases via Git-based CI/CD pipelines, onboarded
+              500+ users, and reduced claim-processing time by 30%.
+            </li>
+            <li id="carelon-frameworks">
+              Developed reusable GenAI frameworks: a Text-to-SQL engine for
+              natural-language database querying, an Agent-to-Agent (A2A)
+              communication layer using CrewAI to orchestrate autonomous task
+              delegation, and a GPT-4o-mini synthetic data-generation pipeline
+              with referential-integrity validation that cut manual test-data
+              preparation by 80%.
+            </li>
+            <li id="carelon-embeddings">
+              Fine-tuned sentence-transformer embedding models on
+              domain-specific data to improve retrieval accuracy.
+            </li>
+            <li id="carelon-detection">
+              Built an experimental framework combining statistical analysis and
+              NLP techniques to distinguish human-authored from AI-generated
+              text in medical reports.
+            </li>
+          </ul>
+        </article>
+
+        <article class="entry" id="henry-harvin">
+          <div class="entry-head">
+            <h3 class="entry-title">Henry Harvin</h3>
+            <p class="entry-dates">May 2021 to July 2021</p>
+          </div>
+          <p class="entry-role">Data Science Intern, Noida, India</p>
+          <ul class="entry-points">
+            <li id="harvin-etl">
+              Implemented scheduled ETL across major social channels; applied
+              spaCy and NLTK for sentiment and emotion classification, enabled
+              same-day issue detection, and reduced negative comments by 5%.
+            </li>
+            <li id="harvin-dashboards">
+              Created Plotly dashboards tracking week-over-week performance for
+              20+ consultants, cutting manual reporting effort by 40% and giving
+              managers a clearer basis for decisions.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">Multilabel Image Classification</h3>
+          </div>
+          <p class="entry-tools">
+            Python, PyTorch, scikit-learn, pandas, NumPy, OpenCV, PIL,
+            Matplotlib
+          </p>
+          <ul class="entry-points">
+            <li id="multilabel-model">
+              Engineered a multi-label image classification model using ResNet
+              and DenseNet architectures, achieving over 90% average validation
+              accuracy while addressing class imbalance through class weights.
+            </li>
+            <li id="multilabel-metrics">
+              Reported precision, recall, and F1-score across 40 attribute
+              classes, reaching an average F1-score of 0.85.
+            </li>
+            <li id="multilabel-tuning">
+              Tuned model hyperparameters using GridSearch, increasing the
+              F1-score by 20% and improving recall for minority classes by 25%.
+            </li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">
+              Hybrid RAG System with Knowledge Graph Integration
+            </h3>
+          </div>
+          <p class="entry-tools">
+            Neo4j, Faiss, sentence-transformers, spaCy
+          </p>
+          <ul class="entry-points">
+            <li id="hybrid-routing">
+              Built an enterprise telecom support system with intelligent query
+              routing between Neo4j graph traversal for structured queries and
+              Faiss vector search for semantic similarity using
+              sentence-transformers embeddings.
+            </li>
+            <li id="hybrid-classifier">
+              Trained a custom spaCy classifier with a 98%+ confidence threshold
+              for P0/P1/P2 escalation, with citation tracking for compliance.
+            </li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">LM Alignment Toward Human Preferences</h3>
+          </div>
+          <p class="entry-tools">
+            Knowledge distillation, LoRA, QLoRA, preference optimization
+          </p>
+          <ul class="entry-points">
+            <li id="alignment-distillation">
+              Aligned smaller language models toward human preferences via
+              knowledge distillation from larger LMs.
+            </li>
+            <li id="alignment-peft">
+              Applied parameter-efficient fine-tuning methods (LoRA and QLoRA)
+              to train models with fewer parameters, and used preference
+              optimization to align them on toxicity and helpfulness.
+            </li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">
+              Deep RL Algorithms Implementation and Evaluation
+            </h3>
+          </div>
+          <p class="entry-tools">REINFORCE, n-step SARSA, Deep Q-Learning</p>
+          <ul class="entry-points">
+            <li id="rl-algorithms">
+              Implemented REINFORCE with baseline, semi-gradient n-step SARSA,
+              and Deep Q-Learning with neural-network policy and value
+              functions.
+            </li>
+            <li id="rl-evaluation">
+              Evaluated all algorithms on CartPole, Acrobot, and a custom
+              autonomous toy car environment, with a comparative analysis across
+              methods.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" aria-labelledby="publication-heading">
+        <h2 id="publication-heading">Publication</h2>
+
+        <article class="entry" id="publication">
+          <div class="entry-head">
+            <h3 class="entry-title">
+              <a
+                href="https://doi.org/10.3303/CET23103108"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Generating Design Space for Production Planning Problems Using
+                Machine Learning Algorithms</a
+              >
+            </h3>
+            <p class="entry-dates">2023</p>
+          </div>
+          <p class="entry-role">
+            Chemical Engineering Transactions, Vol. 103, pages 643 to 648.
+            Sharthi A., Kumar S., Chaturvedi N.D. IIT Patna, Process Systems
+            Engineering Lab.
+          </p>
+          <ul class="entry-points">
+            <li id="paper-scope">
+              Modeled sustainable production planning for India's iron and steel
+              sector across 3 process routes (BF/BOF, coal-based DRI-EAF,
+              scrap-EAF), integrating carbon emissions, energy use, and cost
+              into a single feasibility framework.
+            </li>
+            <li id="paper-classifiers">
+              Trained SVM and Random Forest classifiers to identify feasible
+              design points, reaching 90% precision and recall on the feasible
+              class with SVM and 90% overall accuracy with a 47-tree Random
+              Forest on a held-out 100-point evaluation set.
+            </li>
+            <li id="paper-boundary">
+              Extracted an algebraic decision boundary from the trained SVM's
+              support vectors, reducing feasibility checking for a candidate
+              production path to evaluating a single plane equation instead of
+              re-running the model.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <dl class="skills-list">
+          <dt id="skills-languages">Languages</dt>
+          <dd>Python, SQL, C++</dd>
+          <dt id="skills-ml">Machine learning</dt>
+          <dd>PyTorch, TensorFlow, Keras, scikit-learn, Hugging Face</dd>
+          <dt id="skills-llm">LLMs and GenAI</dt>
+          <dd>
+            LLaMA, OpenAI GPT, Claude, RAG, LangChain, LangGraph, LlamaIndex,
+            AutoGen, CrewAI, prompt engineering, LoRA, QLoRA
+          </dd>
+          <dt id="skills-nlp">NLP</dt>
+          <dd>spaCy, NLTK, sentence-transformers, Tesseract OCR</dd>
+          <dt id="skills-data">Data tools</dt>
+          <dd>
+            pandas, NumPy, PostgreSQL, MySQL, MongoDB, Neo4j, Qdrant, ChromaDB,
+            Faiss
+          </dd>
+          <dt id="skills-ops">MLOps and tools</dt>
+          <dd>AWS, Docker, Kubernetes, Git, CI/CD, MLflow, Streamlit</dd>
+          <dt id="skills-viz">Visualization</dt>
+          <dd>Matplotlib, Seaborn, Plotly, Power BI</dd>
+        </dl>
+      </section>
+
+      <section class="resume-section" aria-labelledby="accomplishments-heading">
+        <h2 id="accomplishments-heading">Accomplishments</h2>
+        <ul class="entry-points">
+          <li id="award-impact">
+            Received the Impact Award three times from Carelon management for
+            impactful solutions and consistent execution.
+          </li>
+          <li id="award-aws">AWS Certified Cloud Practitioner.</li>
+          <li id="award-jee">
+            Ranked in the top 8% of 160,000 candidates on the JEE Advanced
+            examination.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2026 Sharthi Abhinay</p>
+        <ul class="footer-links">
+          <li>
+            <a href="mailto:sharthiabhinay@gmail.com"
+              >sharthiabhinay@gmail.com</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/sharthi-abhinay"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/resume.js" defer></script>
+  </body>
+</html>

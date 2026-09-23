@@ -1,0 +1,743 @@
+/*
+  Sharthi Abhinay, personal homepage
+  Palette: stops from the viridis colormap, matplotlib's default.
+  Purple for headings and the search panel, blue-teal for links,
+  yellow for search highlights. The same ramp encodes relevance scores
+  on the home page and time on the About timeline.
+*/
+
+:root {
+  --paper: #f7f8fa;
+  --ink: #221a2c;
+  --muted: #5d5668;
+  --rule: #dcdde4;
+  --viridis-purple: #440154;
+  --viridis-blue: #2a788e;
+  --viridis-yellow: #fde725;
+  --panel-text: #f4eef8;
+  --panel-muted: #cdb9dd;
+  --panel-link: #9be3d6;
+
+  --font:
+    "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui,
+    -apple-system, "Segoe UI", Roboto, sans-serif;
+  --measure: 66ch;
+
+  /* Bootstrap overrides */
+  --bs-body-font-family: var(--font);
+  --bs-body-font-size: 1.0625rem;
+  --bs-body-line-height: 1.6;
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--paper);
+  --bs-link-color-rgb: 42, 120, 142;
+  --bs-link-hover-color-rgb: 68, 1, 84;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--viridis-purple);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 1.625rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.1875rem;
+}
+
+a {
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--viridis-blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background: var(--viridis-purple);
+  color: #fff;
+  border-radius: 0 0 6px 6px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Navigation */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header .navbar {
+  padding-block: 1.1rem;
+}
+
+.site-brand {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--viridis-purple);
+}
+
+.site-brand:hover,
+.site-brand:focus {
+  color: var(--viridis-purple);
+}
+
+.site-header .nav-link {
+  color: var(--ink);
+  font-weight: 600;
+  padding-inline: 0.9rem;
+}
+
+.site-header .nav-link:hover {
+  color: var(--viridis-purple);
+}
+
+.site-header .nav-link[aria-current="page"] {
+  color: var(--viridis-purple);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--viridis-blue);
+  text-underline-offset: 0.45em;
+}
+
+/* Home: hero */
+
+.hero {
+  padding-block: clamp(3rem, 8vw, 6rem) clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 1.3rem + 3.8vw, 3.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.028em;
+  font-weight: 750;
+  max-width: 21ch;
+  margin-bottom: 1.5rem;
+}
+
+.hero-lede {
+  font-size: 1.1875rem;
+  color: var(--muted);
+  max-width: 60ch;
+  margin-bottom: 1.75rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0;
+}
+
+.button-primary {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: var(--viridis-purple);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  color: #fff;
+  background: #2f0140;
+}
+
+.hero-actions a:not(.button-primary) {
+  font-weight: 600;
+}
+
+/* Home: search panel (the one bold surface on the site) */
+
+.search-panel {
+  background: var(--viridis-purple);
+  color: var(--panel-text);
+  border-radius: 14px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.search-panel h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.search-panel :focus-visible {
+  outline-color: var(--viridis-yellow);
+}
+
+.search-note {
+  color: var(--panel-muted);
+  max-width: 62ch;
+  margin-bottom: 1.75rem;
+}
+
+.search-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.search-input {
+  flex: 1 1 18rem;
+  min-width: 0;
+  font: inherit;
+  padding: 0.75rem 1rem;
+  color: var(--ink);
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+
+.search-input::placeholder {
+  color: #7a7385;
+}
+
+.search-button {
+  font: inherit;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  color: var(--viridis-purple);
+  background: var(--viridis-yellow);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #fff176;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.suggestions-label {
+  color: var(--panel-muted);
+  margin-right: 0.25rem;
+}
+
+.chip {
+  font: inherit;
+  font-size: 0.9375rem;
+  padding: 0.3rem 0.9rem;
+  color: var(--panel-text);
+  background: transparent;
+  border: 1px solid rgba(244, 238, 248, 0.45);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  color: var(--viridis-purple);
+  background: var(--panel-text);
+}
+
+.search-status {
+  margin: 1.75rem 0 0;
+  color: var(--panel-muted);
+}
+
+.search-status:empty {
+  display: none;
+}
+
+.results {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 0.5rem 1.75rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(244, 238, 248, 0.18);
+}
+
+.result-score {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.35rem;
+}
+
+.score-track {
+  display: block;
+  height: 8px;
+  background: rgba(244, 238, 248, 0.14);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.score-fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.score-value {
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--panel-muted);
+}
+
+.result-source {
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.25rem;
+}
+
+.result-text {
+  max-width: 72ch;
+  margin: 0 0 0.5rem;
+}
+
+.result-link,
+.result-link:hover {
+  color: var(--panel-link);
+}
+
+mark {
+  padding: 0 0.12em;
+  color: var(--viridis-purple);
+  background: var(--viridis-yellow);
+  border-radius: 2px;
+}
+
+/* Home: selected work */
+
+.work {
+  padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+.work-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 0.5rem 3rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.work-item:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.work-item h3 {
+  margin: 0;
+  max-width: 22ch;
+}
+
+.work-item p {
+  max-width: var(--measure);
+  margin: 0 0 0.5rem;
+}
+
+/* About */
+
+.page-intro {
+  padding-block: clamp(3rem, 7vw, 5rem) 1.5rem;
+}
+
+.page-title {
+  font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.25rem);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.prose {
+  max-width: var(--measure);
+}
+
+.prose section + section {
+  margin-top: 2.75rem;
+}
+
+.prose p {
+  margin-bottom: 1.1rem;
+}
+
+.prose .opening {
+  font-size: 1.25rem;
+  line-height: 1.55;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid var(--rule);
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 1.4rem 1.4rem;
+}
+
+.timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dot, var(--viridis-purple));
+  border: 2px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--viridis-purple);
+}
+
+.timeline-date {
+  display: block;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--viridis-purple);
+}
+
+.timeline-event {
+  display: block;
+  color: var(--muted);
+}
+
+/* Resume */
+
+.resume {
+  max-width: 54rem;
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+}
+
+.resume-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.25rem 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 3px solid var(--viridis-purple);
+}
+
+.resume-header h1 {
+  font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.35rem;
+}
+
+.resume-tagline {
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.print-button {
+  font: inherit;
+  font-weight: 700;
+  padding: 0.6rem 1.2rem;
+  color: var(--viridis-purple);
+  background: transparent;
+  border: 2px solid var(--viridis-purple);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  color: #fff;
+  background: var(--viridis-purple);
+}
+
+.resume-section {
+  padding-top: 2.25rem;
+}
+
+.resume-section > h2 {
+  font-size: 1.375rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.entry + .entry {
+  margin-top: 1.6rem;
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1.5rem;
+  align-items: baseline;
+}
+
+.entry-title {
+  flex: 1 1 20rem;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.entry-dates {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+}
+
+.entry-role {
+  font-style: italic;
+  color: var(--muted);
+  margin: 0.1rem 0 0.5rem;
+}
+
+.entry-tools {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  margin: 0.1rem 0 0.5rem;
+}
+
+.entry-points {
+  padding-left: 1.15rem;
+  margin: 0;
+}
+
+.entry-points li {
+  margin-bottom: 0.4rem;
+  padding: 0.1rem 0.35rem;
+  margin-left: -0.35rem;
+  border-radius: 4px;
+  scroll-margin-top: 6rem;
+  transition: background-color 0.4s ease;
+}
+
+/* A search result links to one line; highlight it on arrival. */
+.entry-points li:target,
+.skills-list dt:target,
+.skills-list dt:target + dd {
+  background: #fdf6a8;
+  box-shadow: inset 3px 0 0 var(--viridis-yellow);
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 12.5rem 1fr;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+}
+
+.skills-list dt {
+  font-weight: 700;
+  color: var(--viridis-purple);
+  scroll-margin-top: 6rem;
+}
+
+.skills-list dt,
+.skills-list dd {
+  margin: 0;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding-block: 2rem;
+  margin-top: 2rem;
+  color: var(--muted);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Small screens */
+
+@media (max-width: 767.98px) {
+  .work-item {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .skills-list dd {
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .result {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .result-score {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .score-track {
+    flex: 0 0 7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .score-fill,
+  .entry-points li {
+    transition: none;
+  }
+}
+
+/* Print: the resume page becomes a clean document */
+
+@page {
+  margin: 0.6in;
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  h1,
+  h2,
+  h3,
+  .skills-list dt,
+  .entry-dates,
+  .entry-role,
+  .entry-tools,
+  .resume-tagline {
+    color: #000;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .resume {
+    max-width: none;
+    padding: 0;
+  }
+
+  .resume-header h1 {
+    font-size: 20pt;
+  }
+
+  .resume-section > h2 {
+    font-size: 12.5pt;
+    margin-bottom: 0.5rem;
+  }
+
+  .entry-title {
+    font-size: 11pt;
+  }
+
+  .resume-header {
+    border-bottom-color: #000;
+    padding-bottom: 0.75rem;
+  }
+
+  .resume-section {
+    padding-top: 0.9rem;
+  }
+
+  .entry,
+  .entry-points li {
+    break-inside: avoid;
+  }
+
+  .entry-points li:target,
+  .skills-list dt:target,
+  .skills-list dt:target + dd {
+    background: none;
+    box-shadow: none;
+  }
+}

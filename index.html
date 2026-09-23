@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sharthi Abhinay" />
+    <meta
+      name="description"
+      content="Sharthi Abhinay builds retrieval and language model systems. MS Computer Science student at Northeastern University, previously an Associate Software Engineer working on GenAI at Carelon."
+    />
+    <title>Sharthi Abhinay | Data Science and AI</title>
+    <link rel="icon" href="./res/favicon.svg" type="image/svg+xml" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md" aria-label="Main">
+        <div class="container">
+          <a class="navbar-brand site-brand" href="./index.html"
+            >Sharthi Abhinay</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#site-nav-links"
+            aria-controls="site-nav-links"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="site-nav-links">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./resume.html">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero container">
+        <h1 class="hero-title">
+          I'm Sharthi. I build retrieval and language model systems, then
+          measure whether they work.
+        </h1>
+        <p class="hero-lede">
+          I'm an MS Computer Science student at Northeastern University,
+          graduating in May 2027. Before this I spent two years at Carelon as an
+          Associate Software Engineer, building RAG pipelines, document AI, and
+          multi-agent systems for health insurance claims.
+        </p>
+        <p class="hero-actions">
+          <a class="button-primary" href="./resume.html">Read my resume</a>
+          <a href="mailto:sharthiabhinay@gmail.com">Email me</a>
+        </p>
+      </section>
+
+      <section class="container" aria-labelledby="search-heading">
+        <div class="search-panel">
+          <h2 id="search-heading">Search my resume</h2>
+          <p class="search-note">
+            Type a skill or topic and every line of my resume gets ranked by how
+            closely it matches. It runs in your browser with TF-IDF and cosine
+            similarity, a small version of the retrieval step in the systems I
+            build.
+          </p>
+
+          <form id="search-form" class="search-form-wrap" role="search">
+            <label for="search-input" class="search-label"
+              >Skill or topic</label
+            >
+            <div class="search-form">
+              <input
+                id="search-input"
+                class="search-input"
+                type="search"
+                name="q"
+                placeholder="For example, retrieval latency"
+                autocomplete="off"
+                spellcheck="false"
+              />
+              <button class="search-button" type="submit">Search</button>
+            </div>
+          </form>
+
+          <div class="suggestions">
+            <span class="suggestions-label">Or pick one:</span>
+            <button type="button" class="chip" data-query="RAG">RAG</button>
+            <button type="button" class="chip" data-query="agents">
+              agents
+            </button>
+            <button type="button" class="chip" data-query="PyTorch">
+              PyTorch
+            </button>
+            <button type="button" class="chip" data-query="SVM">SVM</button>
+            <button type="button" class="chip" data-query="fine-tuning">
+              fine-tuning
+            </button>
+            <button
+              type="button"
+              class="chip"
+              data-query="reinforcement learning"
+            >
+              reinforcement learning
+            </button>
+          </div>
+
+          <p
+            id="search-status"
+            class="search-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <ol id="search-results" class="results" aria-label="Results"></ol>
+        </div>
+      </section>
+
+      <section class="work container" aria-labelledby="work-heading">
+        <h2 id="work-heading">Selected work</h2>
+        <ul class="work-list">
+          <li class="work-item">
+            <h3>Enterprise RAG over policy documents</h3>
+            <div>
+              <p>
+                At Carelon I built a retrieval system on LLaMA 70B, LangGraph,
+                and Qdrant with cross-encoder reranking, covering 25+ policy
+                documents for 200+ internal users. Top-1 accuracy went from 66%
+                to 78%, and P95 retrieval latency dropped from 1.8s to 0.9s.
+              </p>
+              <a href="./resume.html#carelon-rag">See it on my resume</a>
+            </div>
+          </li>
+          <li class="work-item">
+            <h3>Multi-agent system for member requests</h3>
+            <div>
+              <p>
+                A LangGraph and GPT-4o system coordinating four service agents
+                for address updates, ID cards, member inquiries, and policy
+                terminations. It handled 500+ requests a day at an 85%
+                straight-through rate, with human-in-the-loop validation.
+              </p>
+              <a href="./resume.html#carelon-agents">See it on my resume</a>
+            </div>
+          </li>
+          <li class="work-item">
+            <h3>Published research on feasible production plans</h3>
+            <div>
+              <p>
+                My paper in Chemical Engineering Transactions (2023) trains SVM
+                and Random Forest classifiers to separate feasible steel
+                production plans from infeasible ones, then turns the SVM
+                boundary into a single plane equation a planner can check
+                without re-running the model.
+              </p>
+              <a
+                href="https://doi.org/10.3303/CET23103108"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Read the paper</a
+              >
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2026 Sharthi Abhinay</p>
+        <ul class="footer-links">
+          <li>
+            <a href="mailto:sharthiabhinay@gmail.com"
+              >sharthiabhinay@gmail.com</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/sharthi-abhinay"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/corpus.js" defer></script>
+    <script src="./js/search.js" defer></script>
+  </body>
+</html>

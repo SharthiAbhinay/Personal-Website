@@ -1,0 +1,27 @@
+{
+  "name": "sharthi-abhinay-homepage",
+  "version": "1.0.0",
+  "description": "Personal homepage of Sharthi Abhinay, focused on data science and AI. Built with HTML, CSS, vanilla JavaScript, and Bootstrap 5.",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve .",
+    "lint": "eslint js/",
+    "lint:fix": "eslint js/ --fix",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "portfolio",
+    "data-science",
+    "machine-learning"
+  ],
+  "author": "Sharthi Abhinay",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.3"
+  }
+}
