@@ -27,6 +27,10 @@ Build a responsive, multi-page personal homepage that shows who I am and what I 
 
 [![Home page with my photo, headline, and the Search my resume panel](res/screenshot.png)](https://sharthiabhinay.github.io/Personal-Website/)
 
+## Design Document
+
+[Design_Document.pdf](Design_Document.pdf) covers the project description, user personas, user stories, and design mockups.
+
 ## Design
 
 - **Color:** stops from the viridis colormap (matplotlib's default). Deep purple `#440154` for headings and the search panel, blue-teal `#2A788E` for links, yellow `#FDE725` for search highlights. The same ramp colors the relevance bars on the home page and the dots on the About timeline.
@@ -35,13 +39,13 @@ Build a responsive, multi-page personal homepage that shows who I am and what I 
 
 ## Tech Stack
 
-| Layer | Technologies |
-| --- | --- |
-| Markup | HTML5 |
-| Styling | CSS3, Bootstrap 5.3.8, Google Fonts |
-| Scripting | Vanilla JavaScript (ES6+) |
-| Tooling | ESLint, Prettier, Node.js (dev only) |
-| Deployment | GitHub Pages (static hosting) |
+| Layer      | Technologies                         |
+| ---------- | ------------------------------------ |
+| Markup     | HTML5                                |
+| Styling    | CSS3, Bootstrap 5.3.8, Google Fonts  |
+| Scripting  | Vanilla JavaScript (ES6 modules)     |
+| Tooling    | ESLint, Prettier, Node.js (dev only) |
+| Deployment | GitHub Pages (static hosting)        |
 
 ## Project Structure
 
@@ -60,7 +64,8 @@ Build a responsive, multi-page personal homepage that shows who I am and what I 
 │   ├── favicon.svg     # SA monogram shown in the browser tab
 │   ├── sharthi-abhinay.jpg  # Profile photo on the home page
 │   └── screenshot.png  # Screenshot used in this README
-├── eslint.config.js
+├── Design_Document.pdf # Project description, personas, user stories, mockups
+├── eslint.config.js    # Class ESLint config
 ├── package.json
 ├── LICENSE
 └── README.md
@@ -88,11 +93,13 @@ cd Personal-Website
 
 ### 2. Open it
 
-The scripts load as classic deferred scripts, so you can open `index.html` directly in a browser. To run it on a local server instead:
+The JavaScript uses ES6 modules, which browsers block when a page is opened straight from the file system. Run a local server instead:
 
 ```bash
 npx serve .
 ```
+
+Then open the address it prints, usually http://localhost:3000. In VS Code, the Live Server extension works too.
 
 ### 3. Lint and format (optional)
 
@@ -113,6 +120,7 @@ npm run format
 3. "Suggest some ideas for a favicon for the browser tab."
 4. "Show res/screenshot.png as a picture in the README and put the Class lines on separate lines."
 5. "Check the README for anything missing, unclear, or incorrectly represented."
+6. "Give me the design document, including a project description, user personas, user stories, and design mockups." (Claude drafted Design_Document.pdf, including the wireframes)
 
 ## Sources and References
 
