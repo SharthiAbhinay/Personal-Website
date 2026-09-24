@@ -16,6 +16,9 @@
   ],
   "author": "Sharthi Abhinay",
   "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.4.0",

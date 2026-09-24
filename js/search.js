@@ -1,4 +1,4 @@
-/* global CORPUS */
+import { CORPUS } from "./corpus.js";
 
 // A small TF-IDF search over the resume lines in corpus.js.
 // It runs entirely in the browser: no server, no API calls.
@@ -8,7 +8,7 @@ const STOPWORDS = new Set(
     "a about an and are as at be by can did do does for from has have how i " +
     "in into is it its me my of on or so than that the their them then this " +
     "to was were what with within you your"
-  ).split(" "),
+  ).split(" ")
 );
 
 // Common abbreviations a recruiter might type, expanded to words the
@@ -81,7 +81,7 @@ function queryTerms(query) {
 
 function buildIndex(docs) {
   const docTerms = docs.map((doc) =>
-    tokenize(`${doc.source} ${doc.text} ${doc.keywords || ""}`),
+    tokenize(`${doc.source} ${doc.text} ${doc.keywords || ""}`)
   );
 
   const docFrequency = new Map();
@@ -150,7 +150,7 @@ function viridis(t) {
   const i = Math.min(Math.floor(position), VIRIDIS.length - 2);
   const fraction = position - i;
   const [r, g, b] = VIRIDIS[i].map((channel, k) =>
-    Math.round(channel + (VIRIDIS[i + 1][k] - channel) * fraction),
+    Math.round(channel + (VIRIDIS[i + 1][k] - channel) * fraction)
   );
   return `rgb(${r}, ${g}, ${b})`;
 }
@@ -213,13 +213,13 @@ function renderResult(result, topScore, terms) {
 }
 
 function initSearch() {
-  const form = document.getElementById("search-form");
+  const form = document.querySelector(".search-form-wrap");
   if (!form) {
     return;
   }
-  const input = document.getElementById("search-input");
-  const status = document.getElementById("search-status");
-  const list = document.getElementById("search-results");
+  const input = document.querySelector(".search-input");
+  const status = document.querySelector(".search-status");
+  const list = document.querySelector(".results");
   const index = buildIndex(CORPUS);
 
   function run(query) {
@@ -227,7 +227,8 @@ function initSearch() {
     list.replaceChildren();
 
     if (!trimmed) {
-      status.textContent = "Type a topic first, or pick one of the suggestions.";
+      status.textContent =
+        "Type a topic first, or pick one of the suggestions.";
       input.focus();
       return;
     }

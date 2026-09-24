@@ -1,10 +1,8 @@
-/* exported CORPUS */
-
 // Every searchable line of the resume. Each id matches an element id on
 // resume.html, so a search result can link straight to that line.
 // "keywords" holds tools that belong to an entry but are not in its text.
 
-const CORPUS = [
+export const CORPUS = [
   {
     id: "carelon-rag",
     source: "Carelon, Associate Software Engineer",

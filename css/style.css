@@ -460,6 +460,35 @@ mark {
   box-shadow: 0 0 0 1px var(--viridis-purple);
 }
 
+/* Timeline dots walk the viridis ramp from 2019 to 2027. */
+.timeline li:nth-child(1) {
+  --dot: #440154;
+}
+
+.timeline li:nth-child(2) {
+  --dot: #443983;
+}
+
+.timeline li:nth-child(3) {
+  --dot: #31688e;
+}
+
+.timeline li:nth-child(4) {
+  --dot: #21918c;
+}
+
+.timeline li:nth-child(5) {
+  --dot: #35b779;
+}
+
+.timeline li:nth-child(6) {
+  --dot: #90d743;
+}
+
+.timeline li:nth-child(7) {
+  --dot: #fde725;
+}
+
 .timeline-date {
   display: block;
   font-weight: 700;
@@ -695,7 +724,7 @@ mark {
   .site-footer,
   .skip-link,
   .no-print {
-    display: none !important;
+    display: none;
   }
 
   body {
