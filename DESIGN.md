@@ -8,9 +8,11 @@ The site has three pages:
 
 - **Home** opens with "Hello, I'm Sharthi," my photo, a Search my resume tool, and three pieces of selected work.
 - **About** tells how I moved from chemical engineering at IIT Patna into AI, what I care about, and a timeline of my path.
-- **Resume** lists my education, experience, projects, publication, skills, and accomplishments, and prints as a clean PDF.
+- **Resume** (AI-generated) lists my education, experience, projects, publication, skills, and accomplishments, and prints as a clean PDF.
 
 Each page ends with its own footer: a simple bar on Home, a "Let's work together" band on About with my email, LinkedIn, GitHub, and a button that copies my email address, and a "More coming soon" band on Resume that links to my GitHub.
+
+As the assignment requires, one page is AI-generated: the Resume page (`resume.html`) was generated with Claude (Anthropic, Claude Opus 5.5) from my resume notes. The prompt is listed in the GenAI Usage section of the README.
 
 It's built with vanilla HTML5, CSS3, and JavaScript ES6 modules, with Bootstrap 5 for the grid and navigation. There is no backend, no framework, and no jQuery.
 
@@ -123,82 +125,22 @@ _As a recruiter, I want a clean PDF of the resume so that I can share it inside 
 
 - 3.1 The button opens the browser's print dialog.
 - 3.2 The print view hides the navigation, the footer, and the button itself, and uses black text with page margins.
-
-### Story 4: David checks whether results were measured
-
-David reads the Selected work section first, looking for numbers. He finds before-and-after figures: retrieval latency cut from 1.8s to 0.9s at P95, and an 85% straight-through rate for the multi-agent system. He searches "latency," then reads the note explaining that the search uses TF-IDF and cosine similarity. Curious, he opens the repository on GitHub and reads `search.js`.
-
-_As a hiring manager, I want to see measured results and the candidate's own code so that I can judge real technical depth._
-
-- 4.1 Each selected work item states at least one measured result and links to its source.
-- 4.2 The search panel explains its method in one or two plain sentences.
-- 4.3 The About and Resume footers link to GitHub.
-
-### Story 5: David uses the site from the keyboard
-
-David avoids the mouse. He presses Tab once and a "Skip to content" link appears. He tabs to the search box, types "agents," and presses Enter. Every control he reaches shows a clear focus outline, and he opens a resume line without touching the mouse.
-
-_As a keyboard user, I want every feature to work without a mouse so that I can review the site comfortably._
-
-- 5.1 A skip link is the first focusable element on every page.
-- 5.2 Every interactive element is a real button, link, or form control with a visible focus style.
-- 5.3 Search results and the Copy confirmation are announced to screen readers.
-
-### Story 6: Elena judges research fit
-
-Elena opens the About page with her browser zoomed to 150%. The text reflows into one readable column. She reads how Sharthi moved from chemical engineering into AI, and that the problems he cares about most are public health tools for underserved communities. The timeline shows his first paper accepted in June 2023. She follows the DOI link from the resume, reads the abstract, and adds him to her list of students to contact.
-
-_As a professor, I want to understand a student's motivation and read their research so that I can decide whether they fit my lab._
-
-- 6.1 At 200% zoom, text reflows with no horizontal scrolling.
-- 6.2 Body text contrast is at least 4.5:1 (WCAG AA).
-- 6.3 The publication links to its DOI and opens in a new tab.
-
 ---
 
 ## Design Mockups
 
-Figure 1: Home page, desktop
-![Home page, desktop](res/mockups/1-home-desktop.jpg)
+### Home and About pages
 
-Figure 2: Search results
-![Search results](res/mockups/2-search-results.jpg)
+My hand-drawn sketches of the Home and About pages are in [Design of home and about.pdf](res/mockups/Design%20of%20home%20and%20about.pdf).
 
-Figure 3: Home page, mobile
-![Home page, mobile](res/mockups/3-home-mobile.jpg)
+- **Home:** my name and the navigation at the top, a brief introduction beside my photo with resume and email buttons, a Search my resume panel with a custom search box and predefined suggestions, and my main projects.
+- **About:** my name and the navigation at the top, the story of my journey on the left, and a timeline on the right.
 
-Figure 4: About page
-![About page](res/mockups/4-about.jpg)
+### Resume page (AI-generated)
 
-Figure 5: Resume page
-![Resume page](res/mockups/5-resume.jpg)
+![Resume page](res/mockups/resume_page_design.jpg)
 
----
+The header holds my name, contact details, and a Print or save as PDF button, followed by education, experience, projects, publication, and skills.
 
-## Design Decisions
+_Note: The page footers were designed and changed during building._
 
-### Color palette
-
-The colors come from viridis, the default colormap in matplotlib, a quiet nod to data science. Deep purple (`#440154`) is used for headings and the search panel, blue-teal (`#2A788E`) for links, and yellow (`#FDE725`) for search highlights. The same color ramp also carries information: it colors the relevance bars on Home and the timeline dots on About. All text meets WCAG AA contrast.
-
-### Typography
-
-One family throughout: Atkinson Hyperlegible Next, designed by the Braille Institute for readability. I chose it with low-vision readers like Elena in mind. The home headline scales with the screen width using CSS `clamp()`.
-
-### Layout approach
-
-Bootstrap 5's grid places the text and photo side by side on the home page and the story and timeline side by side on About. Flexbox handles smaller layouts such as the navigation, the footers, and the search form. Below Bootstrap's large breakpoint (992px), everything stacks into one column, and the photo moves above the headline.
-
-### Interaction philosophy
-
-Every interaction answers a visitor's action and leads somewhere useful. Search results link to the exact resume line, which is highlighted on arrival. The Copy button confirms with "Copied" and resets after two seconds. The resume prints cleanly without extra steps. Motion is kept small, and it's turned off for visitors who prefer reduced motion.
-
-### Accessibility
-
-All interactive elements use standard HTML (`<button>`, `<a>`, `<form>`, `<nav>`). Every page has a skip link and visible keyboard focus. The search input has a label, and search results and the Copy confirmation use `aria-live` so screen readers announce them. Images have `alt` text, and decorative icons use `aria-hidden="true"`.
-
----
-
-## How this document was made
-
-The text was drafted with Claude (Anthropic, Claude Opus 5.5) from my resume notes, my statement of purpose, and the finished site. The personas are fictional composites of the site's intended audience. The mockups are my own hand-drawn sketches.

@@ -35,7 +35,7 @@ A short narrated walkthrough of the site and the resume search: [watch on YouTub
 
 ## Design Document
 
-[DESIGN.md](DESIGN.md) covers the project description, user personas, user stories, design mockups, and design decisions.
+[DESIGN.md](DESIGN.md) covers the project description, user personas, user stories, and design mockups.
 
 ## Design
 
@@ -70,7 +70,7 @@ A short narrated walkthrough of the site and the resume search: [watch on YouTub
 ├── res/
 │   ├── demo.gif        # Scrolling demo shown in this README
 │   ├── favicon.svg     # SA monogram shown in the browser tab
-│   ├── mockups/        # Hand-drawn mockups used in DESIGN.md
+│   ├── mockups/        # Mockups used in DESIGN.md
 │   └── sharthi-abhinay.jpg  # Profile photo on the home page
 ├── DESIGN.md           # Project description, personas, user stories, mockups
 ├── eslint.config.js    # Class ESLint config
@@ -127,7 +127,7 @@ npm run lint
 
 1. "create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build"
 2. "Given the rubiric please check the code for any ommisions or any missing parts"
-3. "Give me the design document, including a project description, user personas, user stories, and design mockups." (Claude drafted the text of DESIGN.md)
+3. "Create a resume.html page for my personal website from my resume below, with all sections described in resume, and add a Resume tab to the navigation bar on every page. Include a "Print or save as PDF" button, plus print CSS that hides the navigation and footer. Match the fonts, colors, and Bootstrap 5 layout already in css/style.css."
 
 ## Sources and References
 
