@@ -1,6 +1,6 @@
 # Sharthi Abhinay, Personal Homepage
 
-A personal homepage focused on data science and AI, built with HTML5, CSS3, vanilla JavaScript, and Bootstrap 5. It is written for recruiters, professors, and classmates who want to see my experience with retrieval systems, language models, and machine learning research.
+A personal and professional homepage that traces my path from chemical engineering to AI, and lets visitors search my resume the way a retrieval system searches documents.
 
 **Live site:** https://sharthiabhinay.github.io/Personal-Website/
 
@@ -25,7 +25,7 @@ Build a responsive, multi-page personal homepage that shows who I am and what I 
 
 ## Screenshot
 
-[![Home page with my photo, headline, and the Search my resume panel](res/screenshot.png)](https://sharthiabhinay.github.io/Personal-Website/)
+[![Home page with my photo, headline, and the Search my resume panel](res/demo.gif)](https://sharthiabhinay.github.io/Personal-Website/)
 
 ## Design Document
 
