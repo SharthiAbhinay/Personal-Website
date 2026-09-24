@@ -1,15 +1,15 @@
-import globals from 'globals';
-import js from '@eslint/js';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import prettier from 'eslint-plugin-prettier';
+import globals from "globals";
+import js from "@eslint/js";
+import eslintConfigPrettier from "eslint-config-prettier";
+import prettier from "eslint-plugin-prettier";
 
 export default [
   {
-    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
 
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      ecmaVersion: "latest",
+      sourceType: "module",
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -31,24 +31,24 @@ export default [
       ...js.configs.recommended.rules,
 
       indent: [
-        'error',
+        "error",
         2,
         {
           SwitchCase: 1,
         },
       ],
 
-      'linebreak-style': ['error', 'unix'],
-      quotes: ['error', 'double'],
-      semi: ['error', 'always'],
-      'no-console': 0,
+      "linebreak-style": ["error", "unix"],
+      quotes: ["error", "double"],
+      semi: ["error", "always"],
+      "no-console": 0,
 
       // Prettier integration - this runs Prettier through ESLint
-      'prettier/prettier': [
-        'error',
+      "prettier/prettier": [
+        "error",
         {
-          endOfLine: 'lf',
-          trailingComma: 'es5',
+          endOfLine: "lf",
+          trailingComma: "es5",
           singleQuote: false,
         },
       ],

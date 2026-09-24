@@ -6,7 +6,7 @@ A personal and professional homepage that traces my path from chemical engineeri
 
 ## Author
 
-**Sharthi Abhinay**
+**Sharthi Abhinay**\
 [sharthiabhinay@gmail.com](mailto:sharthiabhinay@gmail.com) | [LinkedIn](https://www.linkedin.com/in/sharthi-abhinay)
 
 ## Class
@@ -23,19 +23,25 @@ Build a responsive, multi-page personal homepage that shows who I am and what I 
 - **About** tells how I moved from chemical engineering to AI, what I care about (AI for public health, grounded and measurable systems), and a timeline of my path.
 - **Resume** lists my education, experience, projects, publication, skills, and accomplishments, with a button that prints the page as a clean PDF.
 
+Each page has its own footer: a simple bar on Home, a "Let's work together" band on About with my email, LinkedIn, GitHub, and a button that copies my email address, and a "More coming soon" band on Resume that links to my GitHub.
+
 ## Screenshot
 
-[![Home page with my photo, headline, and the Search my resume panel](res/demo.gif)](https://sharthiabhinay.github.io/Personal-Website/)
+[![Scrolling demo of the home page, the Search my resume panel, and the other pages](res/demo.gif)](https://sharthiabhinay.github.io/Personal-Website/)
+
+## Video Demo
+
+A short narrated walkthrough of the site and the resume search: [watch on YouTube](https://youtu.be/REPLACE-WITH-YOUR-VIDEO-ID)
 
 ## Design Document
 
-[Design_Document.pdf](Design_Document.pdf) covers the project description, user personas, user stories, and design mockups.
+[DESIGN.md](DESIGN.md) covers the project description, user personas, user stories, design mockups, and design decisions.
 
 ## Design
 
-- **Color:** stops from the viridis colormap (matplotlib's default). Deep purple `#440154` for headings and the search panel, blue-teal `#2A788E` for links, yellow `#FDE725` for search highlights. The same ramp colors the relevance bars on the home page and the dots on the About timeline.
+- **Color:** stops from the viridis colormap (matplotlib's default). Deep purple `#440154` for headings, the search panel, and the footers, blue-teal `#2A788E` for links, yellow `#FDE725` for search highlights. The same ramp colors the relevance bars on the home page and the dots on the About timeline.
 - **Type:** one family, Atkinson Hyperlegible Next, designed by the Braille Institute for readability.
-- **Accessibility:** skip link, visible keyboard focus, labeled search input, an `aria-live` status for search results, color contrast checked against WCAG AA, and reduced motion respected.
+- **Accessibility:** skip link, visible keyboard focus, labeled search input, `aria-live` announcements for search results and the Copy email confirmation, color contrast checked against WCAG AA, and reduced motion respected.
 
 ## Tech Stack
 
@@ -59,14 +65,17 @@ Build a responsive, multi-page personal homepage that shows who I am and what I 
 ├── js/
 │   ├── corpus.js       # Resume lines used by the search
 │   ├── search.js       # TF-IDF index, ranking, and results rendering
-│   └── resume.js       # Print or save as PDF button
+│   ├── resume.js       # Print or save as PDF button
+│   └── contact.js      # Copy email button in the About footer
 ├── res/
+│   ├── demo.gif        # Scrolling demo shown in this README
 │   ├── favicon.svg     # SA monogram shown in the browser tab
-│   ├── sharthi-abhinay.jpg  # Profile photo on the home page
-│   └── screenshot.png  # Screenshot used in this README
-├── Design_Document.pdf # Project description, personas, user stories, mockups
+│   ├── mockups/        # Hand-drawn mockups used in DESIGN.md
+│   └── sharthi-abhinay.jpg  # Profile photo on the home page
+├── DESIGN.md           # Project description, personas, user stories, mockups
 ├── eslint.config.js    # Class ESLint config
-├── package.json
+├── package.json        # Dependencies and npm scripts
+├── package-lock.json   # Exact installed versions
 ├── LICENSE
 └── README.md
 ```
@@ -101,12 +110,13 @@ npx serve .
 
 Then open the address it prints, usually http://localhost:3000. In VS Code, the Live Server extension works too.
 
-### 3. Lint and format (optional)
+### 3. Lint (optional)
+
+Requires Node.js. Install the dev tools, then check the JavaScript with the class ESLint config:
 
 ```bash
 npm install
 npm run lint
-npm run format
 ```
 
 ## GenAI Usage
@@ -115,12 +125,9 @@ npm run format
 
 **Prompts used:**
 
-1. "Write vanilla JavaScript functions,that rank the lines of a global CORPUS resume array against a search query using stemming, abbreviation expansion, TF-IDF weighting, and cosine similarity, and return the top 5 as { doc, score }."
-2. "Add my picture to the right of the headline and suggest ways to adjust its background or size."
-3. "Suggest some ideas for a favicon for the browser tab."
-4. "Show res/screenshot.png as a picture in the README and put the Class lines on separate lines."
-5. "Check the README for anything missing, unclear, or incorrectly represented."
-6. "Give me the design document, including a project description, user personas, user stories, and design mockups." (Claude drafted Design_Document.pdf, including the wireframes)
+1. "create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build"
+2. "Given the rubiric please check the code for any ommisions or any missing parts"
+3. "Give me the design document, including a project description, user personas, user stories, and design mockups." (Claude drafted the text of DESIGN.md)
 
 ## Sources and References
 

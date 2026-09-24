@@ -140,7 +140,16 @@ a:hover {
   letter-spacing: -0.028em;
   font-weight: 750;
   max-width: 21ch;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-tagline {
+  font-size: clamp(1.375rem, 1rem + 1.4vw, 2rem);
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--ink);
+  max-width: 28ch;
+  margin-bottom: 1.25rem;
 }
 
 .hero-lede {
@@ -672,6 +681,157 @@ mark {
   margin: 0;
 }
 
+/* Each page has its own footer: a simple bar on Home, a contact band on
+   About, and a "more coming soon" band on Resume. */
+
+.footer-bar,
+.footer-cta {
+  color: var(--panel-text);
+  background: var(--viridis-purple);
+  border-top: 0;
+}
+
+.footer-bar a,
+.footer-cta a {
+  color: var(--panel-text);
+}
+
+.footer-bar a:hover,
+.footer-cta a:hover {
+  color: #fff;
+}
+
+.footer-bar :focus-visible,
+.footer-cta :focus-visible {
+  outline-color: var(--viridis-yellow);
+}
+
+.footer-cta {
+  padding-block: clamp(3rem, 8vw, 5rem) 1.5rem;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: clamp(1.875rem, 1.4rem + 2vw, 2.75rem);
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.footer-lede {
+  max-width: 52ch;
+  margin: 0 auto 2rem;
+  color: var(--panel-muted);
+}
+
+.footer-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contacts li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.footer-contact:hover {
+  text-decoration: underline;
+}
+
+.footer-icon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(244, 238, 248, 0.35);
+  border-radius: 50%;
+}
+
+.footer-icon svg,
+.footer-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.copy-button {
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.3rem 0.85rem;
+  color: var(--viridis-purple);
+  background: var(--viridis-yellow);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  background: #fff176;
+}
+
+.copy-status {
+  min-height: 1.6em;
+  margin: 1rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--panel-muted);
+}
+
+.footer-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: 1px solid rgba(244, 238, 248, 0.45);
+  border-radius: 999px;
+}
+
+.footer-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid rgba(244, 238, 248, 0.6);
+  border-radius: 999px;
+}
+
+.footer-cta .footer-button:hover {
+  color: var(--viridis-purple);
+  background: var(--panel-text);
+}
+
+.footer-copyright {
+  margin: 2.5rem 0 0;
+  font-size: 0.875rem;
+  color: var(--panel-muted);
+}
+
 /* Small screens */
 
 @media (max-width: 767.98px) {
@@ -703,6 +863,10 @@ mark {
 
   .score-track {
     flex: 0 0 7rem;
+  }
+
+  .footer-contact {
+    font-size: 0.9375rem;
   }
 }
 
