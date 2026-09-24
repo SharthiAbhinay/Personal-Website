@@ -31,7 +31,7 @@ Each page has its own footer: a simple bar on Home, a "Let's work together" band
 
 ## Video Demo
 
-A short narrated walkthrough of the site and the resume search: [watch on YouTube](https://youtu.be/REPLACE-WITH-YOUR-VIDEO-ID)
+A short narrated walkthrough: [watch on YouTube](https://youtu.be/TXkZoKmyaAQ)
 
 ## Design Document
 
