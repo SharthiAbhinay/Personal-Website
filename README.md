@@ -102,32 +102,17 @@ npm run lint
 npm run format
 ```
 
-### 4. Deploy
-
-Push to GitHub and enable GitHub Pages for the `main` branch, serving from the repository root.
-
 ## GenAI Usage
 
 **Tool:** Claude by Anthropic (claude.ai), model Claude Opus 5.5
 
-**How it was used:**
+**Prompts used:**
 
-- Reviewed two classmates' CS 5610 homepages for structure and conventions (multi-page layout, Bootstrap, ESLint and Prettier setup, README format)
-- Generated the HTML for all three pages, the CSS, and the JavaScript for the resume search and print button
-- Wrote the page copy from my resume notes and my statement of purpose, keeping every figure consistent with my resume
-- Proposed the design direction (viridis palette, Atkinson Hyperlegible Next, a live search as the home page's main feature)
-- Tested the search ranking and page behavior, and drafted this README
-- Cropped and resized my profile photo and added it to the home page layout
-- Designed the "SA" favicon, with letter shapes traced from Poppins Bold
-- Fixed README formatting (screenshot, line breaks) and reviewed the README for accuracy
-
-**Prompts used (summarized):**
-
-1. "Go through the two personal pages in my folder for inspiration, then build me a simple personal website focused only on data science and AI, including a resume page, using my resume notes and my statement of purpose."
-2. "Add my picture to the right of the headline, and change its background or size as you see fit."
-3. "Suggest the best favicon for the browser tab."
-4. "Show res/screenshot.png as a picture in the README, and put the Class lines on separate lines."
-5. "Check the README for anything missing or wrongly represented."
+1. "Write vanilla JavaScript functions,that rank the lines of a global CORPUS resume array against a search query using stemming, abbreviation expansion, TF-IDF weighting, and cosine similarity, and return the top 5 as { doc, score }."
+2. "Add my picture to the right of the headline and suggest ways to adjust its background or size."
+3. "Suggest some ideas for a favicon for the browser tab."
+4. "Show res/screenshot.png as a picture in the README and put the Class lines on separate lines."
+5. "Check the README for anything missing, unclear, or incorrectly represented."
 
 ## Sources and References
 
