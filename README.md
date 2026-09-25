@@ -33,6 +33,10 @@ Each page has its own footer: a simple bar on Home, a "Let's work together" band
 
 A short narrated walkthrough: [watch on YouTube](https://youtu.be/TXkZoKmyaAQ)
 
+## Presentation Slides
+
+My Project 1 presentation: [view on Google Slides](https://docs.google.com/presentation/d/1YtOEfx7-8GkK2TJk4GKSTDukhReopnbN2VbP6V74vzA/edit?usp=sharing)
+
 ## Design Document
 
 [DESIGN.md](DESIGN.md) covers the project description, user personas, user stories, and design mockups.
@@ -123,9 +127,10 @@ npm run lint
 
 **Prompts used:**
 
-1. "create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build"
+1. "Create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build, Video Demo, GenAi Usage, References, Google slides"
 2. "Given the rubiric please check the code for any ommisions or any missing parts"
 3. "Create a resume.html page for my personal website from my resume below, with all sections described in resume, and add a Resume tab to the navigation bar on every page. Include a "Print or save as PDF" button, plus print CSS that hides the navigation and footer. Match the fonts, colors, and Bootstrap 5 layout already in css/style.css."
+4. "Give the me the Mockup Diagram for the html file you created for resume."
 
 ## Sources and References
 
