@@ -1,6 +1,6 @@
 # Sharthi Abhinay, Personal Website
 
-A personal and professional Website that traces my path from chemical engineering to a Data Scientist, and lets visitors search my resume the way a retrieval system searches documents.
+A personal and professional website that traces my path from chemical engineering to data scientist, and lets visitors search my resume like a retrieval system searches documents.
 
 **Live site:** https://sharthiabhinay.github.io/Personal-Website/
 
@@ -17,7 +17,7 @@ Course page: https://johnguerra.co/classes/webDevelopment_online_fall_2026/
 
 ## Project Objective
 
-Build a responsive, multi-page personal homepage that shows who I am and what I have built in data science and AI, and that behaves a little like the systems I work on.
+Build a responsive, multi-page personal website that shows who I am and what I have built in data science and AI, and that behaves a little like the systems I work on.
 
 - **Home** introduces me and includes a "Search my resume" tool. A visitor types a skill or topic, and the page ranks every line of my resume by TF-IDF and cosine similarity, highlights the matching words, and links to the exact line on the resume page.
 - **About** tells how I moved from chemical engineering to AI, what I care about (AI for public health, grounded and measurable systems), and a timeline of my path.
@@ -86,8 +86,6 @@ A short narrated walkthrough: [watch on YouTube](https://youtu.be/TXkZoKmyaAQ)
 2. `search.js` tokenizes each line, applies a light stemmer, and builds a TF-IDF vector per line.
 3. A query is expanded with a few common abbreviations (for example, RAG, LLM, RL), turned into a vector, and compared to every line with cosine similarity.
 4. The top five matches are shown with their score, the matching words highlighted, and a link that jumps to that line on the resume, where it is highlighted.
-
-Everything runs in the browser. There is no server and no API call.
 
 ## Instructions to Build
 
