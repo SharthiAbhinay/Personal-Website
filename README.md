@@ -1,6 +1,6 @@
-# Sharthi Abhinay, Personal Homepage
+# Sharthi Abhinay, Personal Website
 
-A personal and professional homepage that traces my path from chemical engineering to AI, and lets visitors search my resume the way a retrieval system searches documents.
+A personal and professional Website that traces my path from chemical engineering to a Data Scientist, and lets visitors search my resume the way a retrieval system searches documents.
 
 **Live site:** https://sharthiabhinay.github.io/Personal-Website/
 
